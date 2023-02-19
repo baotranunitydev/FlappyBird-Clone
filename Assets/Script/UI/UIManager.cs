@@ -107,7 +107,6 @@ public class UIManager : MonoBehaviour
     public void ResetGame()
     {
         player.currentScore = 0;
-        player.isSoundFly = false;
         player.isDetected = false;
         player.transform.position = new Vector3(0, 0, 0);
         foreach (var obj in PipePool.Instance.Pipes)
@@ -213,5 +212,6 @@ public class UIManager : MonoBehaviour
     private void OnApplicationQuit()
     {
         ResetGame();
+        player.isSoundFly = false;
     }
 }

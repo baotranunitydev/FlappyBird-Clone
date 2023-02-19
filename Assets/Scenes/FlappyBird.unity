@@ -328,6 +328,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 286113815490399504, guid: 05e8ffadeee3c6a42be9c4f69d8b3ce6, type: 3}
+      propertyPath: soundBackround.volume
+      value: 0.7
+      objectReference: {fileID: 0}
     - target: {fileID: 2375919011240642055, guid: 05e8ffadeee3c6a42be9c4f69d8b3ce6, type: 3}
       propertyPath: m_RootOrder
       value: 1
