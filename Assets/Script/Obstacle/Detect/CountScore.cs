@@ -6,6 +6,8 @@ public class CountScore : BaseDetect
     void Start()
     {
         baseDetect = GetComponent<BaseDetect>();
+        baseDetect.ScaleX = 2;
+        baseDetect.ScaleY = 2;
     }
 
     // Update is called once per frame

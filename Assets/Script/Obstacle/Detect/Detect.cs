@@ -6,6 +6,8 @@ public class Detect : BaseDetect
     void Start()
     {
         baseDetect = GetComponent<BaseDetect>();
+        baseDetect.ScaleX = 3f;
+        baseDetect.ScaleY = 0.42f;
     }
 
     // Update is called once per frame

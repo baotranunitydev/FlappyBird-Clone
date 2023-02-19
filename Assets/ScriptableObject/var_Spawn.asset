@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e9f82b5c26bb434e9565d06a1bda005, type: 3}
   m_Name: var_Spawn
   m_EditorClassIdentifier: 
+  speed: 2
   maxTime: 2.5
   height: 1.5
-  timer: 0.9942896
+  timer: 2.5
