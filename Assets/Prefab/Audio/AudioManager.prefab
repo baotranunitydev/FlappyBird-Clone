@@ -44,5 +44,45 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d2b799ad0d21f046b009a71e6692e4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundsMusic: []
-  soundsEffect: []
+  soundBackround:
+    name: Backround
+    clip: {fileID: 8300000, guid: baf92c94aac5c4440bded0bf0c6c9fcb, type: 3}
+    volume: 0.6
+    loop: 1
+    source: {fileID: 0}
+  soundsEffect:
+  - name: ------UI-----
+    clip: {fileID: 0}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: UIClick
+    clip: {fileID: 8300000, guid: fbcf759e2ea74934f89151ad60050a67, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: UIHover
+    clip: {fileID: 8300000, guid: 82cb1f3a1a7244a458a574f169a24127, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: -----Game-----
+    clip: {fileID: 0}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: CountScore
+    clip: {fileID: 8300000, guid: 8fcb20a0822791e4daf841f54802e8e8, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Die
+    clip: {fileID: 8300000, guid: d9b890d403d5ce540957cf6cf12ecf57, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Fly
+    clip: {fileID: 8300000, guid: 7c31d5371a6d12a4d81f895a5563c4b7, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}

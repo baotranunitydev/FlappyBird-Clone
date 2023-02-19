@@ -46,9 +46,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawn: {fileID: 11400000, guid: 8aefc737e9f68214c967a927ef22fd5d, type: 2}
+  player: {fileID: 11400000, guid: 9ac958c197d8e894e8b0641990094c9a, type: 2}
   parrent: {fileID: 4833014238045936425}
   pipePrefab: {fileID: 468246082306929603, guid: 8e9a6d0a8b55c2040b9dfa51c5b86fcc, type: 3}
-  poolSize: 3
+  poolSize: 2
 --- !u!1 &4833014238045936425
 GameObject:
   m_ObjectHideFlags: 0

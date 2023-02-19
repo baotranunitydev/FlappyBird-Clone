@@ -47,8 +47,8 @@ public class UIManager : MonoBehaviour
 
     public void OnClickStartGame()
     {
-        player.isSoundFly = true;
         Time.timeScale = 1;
+        player.isSoundFly = true;
         Hide(cStartGame);
         Show(cPlayGame);
         Hide(cEndGame);
@@ -57,12 +57,13 @@ public class UIManager : MonoBehaviour
 
     public void OnClickPauseGame()
     {
+
         Time.timeScale = 0;
+        player.isSoundFly = false;
         Hide(cStartGame);
         Hide(cPlayGame);
         Hide(cEndGame);
         Show(cIsPause);
-        player.isSoundFly = false;
     }
 
     public void ShowEngGame()
@@ -77,33 +78,33 @@ public class UIManager : MonoBehaviour
     public void OnClickResume()
     {
         Time.timeScale = 1;
+        player.isSoundFly = true;
         Hide(cStartGame);
         Show(cPlayGame);
         Hide(cEndGame);
         Hide(cIsPause);
-        player.isSoundFly = true;
     }
 
     public void OnClickHome()
     {
         Time.timeScale = 0;
+        player.isSoundFly = false;
         Show(cStartGame);
         Hide(cPlayGame);
         Hide(cEndGame);
         Hide(cIsPause);
         ResetGame();
-        player.isSoundFly = false;
     }
 
     public void OnClickAgain()
     {
         Time.timeScale = 1;
+        player.isSoundFly = true;
         Hide(cStartGame);
         Show(cPlayGame);
         Hide(cEndGame);
         Hide(cIsPause);
         ResetGame();
-        player.isSoundFly = true;
     }
 
     public void ResetGame()
@@ -188,16 +189,16 @@ public class UIManager : MonoBehaviour
 
     void ShowScoreEndGame()
     {
-        scoreEndGame.text = player.currentScore.ToString();
         BestScore();
+        scoreEndGame.text = player.currentScore.ToString();
         bestScore.text = player.bestScore.ToString();
-        if(player.currentScore <= 20)
+        if(player.currentScore <= 30 && player.currentScore >= 10)
         {
             bronze.SetActive(true);
             Sliver.SetActive(false);
             Gold.SetActive(false);
         }
-        else if(player.currentScore <= 50 && player.currentScore > 20)
+        else if(player.currentScore <= 50 && player.currentScore > 30)
         {
             bronze.SetActive(false);
             Sliver.SetActive(true);
@@ -210,11 +211,10 @@ public class UIManager : MonoBehaviour
             Gold.SetActive(true);
         }
     }
+    #endregion
 
     private void OnApplicationQuit()
     {
-        player.currentScore = 0;
+        ResetGame();
     }
-
-    #endregion
 }

@@ -118,6 +118,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89c8cfe3007fcf64199fc5671ccc3c2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: 70
+  force: 100
   gravity: 2
-  var_TransfomPlayer: {fileID: 11400000, guid: 9ac958c197d8e894e8b0641990094c9a, type: 2}
+  player: {fileID: 11400000, guid: 9ac958c197d8e894e8b0641990094c9a, type: 2}

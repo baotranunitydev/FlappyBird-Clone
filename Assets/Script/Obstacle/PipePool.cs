@@ -6,8 +6,8 @@ public class PipePool : SingletonMonoBehaviour<PipePool>
 {
     [SerializeField] var_Spawn spawn;
     [SerializeField] var_Player player;
-    [SerializeField] GameObject parrent;
     [SerializeField] GameObject pipePrefab;
+    [SerializeField] GameObject parrent;
     [SerializeField] int poolSize = 5;
 
 

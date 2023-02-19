@@ -36,6 +36,18 @@ public class BaseDetect : MonoBehaviour
         Player.isChange = true;
     }
 
+    public void Ground()
+    {
+        if (Player.transform.position.y <= -3.65 && !Player.isDetected)
+        {
+            if (AudioManager.HasInstance)
+            {
+                AudioManager.Instance.PlaySoundEffect("Die");
+            }
+            Player.isDetected = true;
+        }
+    }
+
     public void SoundDie()
     {
         if (AudioManager.HasInstance)

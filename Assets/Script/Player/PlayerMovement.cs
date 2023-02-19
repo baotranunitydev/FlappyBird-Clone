@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Movement : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] float force;
     [SerializeField] float gravity;
@@ -10,8 +10,9 @@ public class Movement : MonoBehaviour
 
     void Start()
     {
-        transform.position = new Vector3(0, 0, 0);
         player.transform = transform;
+        player.force = force;
+        player.gravity = gravity;
     }
 
     // Update is called once per frame
@@ -25,34 +26,20 @@ public class Movement : MonoBehaviour
         {
             Graviti();
         }
-        Ground();
     }
 
     void Fly()
     {
-        if(AudioManager.HasInstance && player.isSoundFly)
+        transform.Translate(new Vector3(0, player.force, 0) * Time.deltaTime);
+        if (AudioManager.HasInstance && player.isSoundFly)
         {
            AudioManager.Instance.PlaySoundEffect("Fly");
         }
-        transform.Translate(new Vector3(0,force,0) * Time.deltaTime);
     }
 
     void Graviti()
     {
-        transform.Translate(new Vector3(0,-gravity,0) * Time.deltaTime);
-
-    }
-
-    void Ground()
-    {
-        if (transform.position.y <= -3.65 && !player.isDetected)
-        {
-            if (AudioManager.HasInstance)
-            {
-                AudioManager.Instance.PlaySoundEffect("Die");
-            }
-            player.isDetected = true;  
-        }
+        transform.Translate(new Vector3(0,-player.gravity, 0) * Time.deltaTime);
     }
 }
 

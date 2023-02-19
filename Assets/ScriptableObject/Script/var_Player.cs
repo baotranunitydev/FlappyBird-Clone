@@ -6,7 +6,9 @@ using UnityEngine;
 public class var_Player : ScriptableObject
 {
 	public Transform transform;
-	public int currentScore;
+	public float force = 100;
+	public float gravity = 2;
+	public int currentScore = 0;
 	public int bestScore;
 	public bool isSoundFly = false;
 	public bool isDetected = false;

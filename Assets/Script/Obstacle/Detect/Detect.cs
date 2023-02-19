@@ -15,6 +15,7 @@ public class Detect : BaseDetect
     void Update()
     {
         Detected();
+        baseDetect.Ground();
     }
 
     public override void Detected()
