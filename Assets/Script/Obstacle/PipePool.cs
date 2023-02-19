@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -20,7 +19,7 @@ public class PipePool : SingletonMonoBehaviour<PipePool>
         Pipes = new List<GameObject>();
         for (int i = 0; i < poolSize; i++)
         {
-            GameObject pipe = Instantiate(pipePrefab);
+            var pipe = Instantiate(pipePrefab);
             pipe.transform.parent = parrent.transform;
             pipe.SetActive(false);
             Pipes.Add(pipe);
@@ -40,7 +39,7 @@ public class PipePool : SingletonMonoBehaviour<PipePool>
 
     private void SpawnPipe()
     {
-        GameObject pipe = GetPipeFromPool();
+        var pipe = GetPipeFromPool();
         if (pipe != null)
         {
             pipe.transform.position = new Vector3(transform.position.x, transform.position.y + Random.Range(-spawn.height, spawn.height), transform.position.z);
@@ -52,14 +51,14 @@ public class PipePool : SingletonMonoBehaviour<PipePool>
 
     private GameObject GetPipeFromPool()
     {
-        foreach (GameObject pipe in Pipes)
+        foreach (var pipe in Pipes)
         {
             if (!pipe.activeInHierarchy)
             {
                 return pipe;
             }
         }
-        GameObject newPipe = Instantiate(pipePrefab);
+        var newPipe = Instantiate(pipePrefab);
         newPipe.SetActive(false);
         Pipes.Add(newPipe);
         return newPipe;

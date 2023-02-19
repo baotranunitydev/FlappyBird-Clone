@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
 
 public class UIManager : MonoBehaviour
 {
@@ -113,7 +110,7 @@ public class UIManager : MonoBehaviour
         player.isSoundFly = false;
         player.isDetected = false;
         player.transform.position = new Vector3(0, 0, 0);
-        foreach (GameObject obj in PipePool.Instance.Pipes)
+        foreach (var obj in PipePool.Instance.Pipes)
         {
             obj.SetActive(false);
         }

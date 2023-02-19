@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: var_Player
   m_EditorClassIdentifier: 
   transform: {fileID: 0}
+  force: 100
+  gravity: 2
   currentScore: 0
-  bestScore: 18
-  isSoundFly: 1
+  bestScore: 52
+  isSoundFly: 0
   isDetected: 0
   isChange: 0

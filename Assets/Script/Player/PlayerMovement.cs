@@ -1,43 +1,36 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] float force;
-    [SerializeField] float gravity;
+
     [SerializeField] var_Player player;
 
-    void Start()
+    private void Start()
     {
         player.transform = transform;
-        player.force = force;
-        player.gravity = gravity;
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
         {
             Fly();
         }
-        else
-        {
-            Graviti();
-        }
+        Gravity();
     }
 
     void Fly()
     {
-        transform.Translate(new Vector3(0, player.force, 0) * Time.deltaTime);
+        var playerForce = new Vector3(0,Mathf.Clamp(player.force * Time.deltaTime,0,0.8f), 0);
+        transform.Translate(playerForce);
         if (AudioManager.HasInstance && player.isSoundFly)
         {
            AudioManager.Instance.PlaySoundEffect("Fly");
         }
     }
 
-    void Graviti()
+    void Gravity()
     {
         transform.Translate(new Vector3(0,-player.gravity, 0) * Time.deltaTime);
     }
