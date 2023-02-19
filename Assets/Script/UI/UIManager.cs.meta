@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 5966abc1f1d806941a02e02758311083
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - player: {fileID: 11400000, guid: 9ac958c197d8e894e8b0641990094c9a, type: 2}
+  - spawn: {fileID: 11400000, guid: 8aefc737e9f68214c967a927ef22fd5d, type: 2}
+  - Pause: {instanceID: 0}
+  - isPause: {instanceID: 0}
+  - scorePlayGame: {instanceID: 0}
+  - scoreEndGame: {instanceID: 0}
+  - bestScore: {instanceID: 0}
+  - startGame: {instanceID: 0}
+  - playGame: {instanceID: 0}
+  - endGame: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
